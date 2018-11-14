@@ -39,3 +39,4 @@ const insertBottomBar = function() {
   
   insertTopBar();
   insertBottomBar();
+  
