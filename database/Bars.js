@@ -42,7 +42,7 @@ let getInfo = (req,res) => {
                     combineBars = [shortItem, shortBot]
                     res.send(combineBars);
                 } 
-            console.log('combineBars', combineBars);
+            //console.log('combineBars', combineBars);
             res.send(combineBars)
             })
         }
@@ -61,7 +61,7 @@ let getOne = (req, res) => {
                 var shortItem = item.slice(0,4);
                 var shortBot = bot.slice(0,4);
                 var combineBars = [shortItem, shortBot]
-                console.log('combine', combineBars);
+                //console.log('combine', combineBars);
                 res.sendFile(page.join(`${__dirname}/../dist/index.html`));
             }
 
