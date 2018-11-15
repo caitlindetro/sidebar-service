@@ -16,15 +16,13 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    console.log('are you mounting');
     let sideId = Number(window.location.pathname.replace(/\//, ''));
-    if(sideId === 1){
+    if(sideId === 1) {
       axios.get(`http://localhost:3002/api/sidebar/${sideId}`).then(posts => {
         this.setState({
           topBar: posts.data[0],
           botBar: posts.data[1]
         })
-        console.log('this is the topbar', this.state.topBar);
       })
     } 
     axios.get(`http://localhost:3002/api/sidebar/${sideId}`).then(posts => {
@@ -35,20 +33,16 @@ export default class App extends React.Component {
     })
   }
 
-
-
   render() {
-      return ( 
-        <div>
-          <aside id="ASIDE_1">
-            <div id="DIV_2">
-              <TopBar topInfo={this.state.topBar}/>
-              <SoldHomes botInfo={this.state.botBar}/>
-            </div>
-          </aside>
-        </div>
-      )
-    
+    return ( 
+      <div>
+        <aside id="ASIDE_1">
+          <div id="DIV_2">
+            <TopBar topInfo={this.state.topBar}/>
+            <SoldHomes botInfo={this.state.botBar}/>
+          </div>
+        </aside>
+      </div>
+    )
   }
 }
-
