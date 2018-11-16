@@ -4,7 +4,7 @@ const stringify = require('csv-stringify');
 
 const topBar = [];
 
-for (var i = 1; i <= 1000000; i++) {
+for (var i = 7000001; i <= 8000000; i++) {
   topBar.push({
     'id': i,
     'name': faker.name.findName(),
@@ -16,7 +16,7 @@ for (var i = 1; i <= 1000000; i++) {
 }
 
 stringify(topBar, (err, output) => {
-  fs.appendFile('top.csv', output, err => {
+  fs.appendFile('database/top.csv', output, err => {
     if (err) {
       console.error(err);
     }
