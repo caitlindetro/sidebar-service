@@ -6,7 +6,7 @@ const chance = new Chance();
 
 const bottomBar = [];
 
-for (var i = 1; i <= 500000; i++) {
+for (var i = 5000001; i <= 6000000; i++) {
   bottomBar.push({
     'id': i,
     'price': Math.floor(Math.random() * (1000000 - 100000) + 100000),
@@ -19,7 +19,7 @@ for (var i = 1; i <= 500000; i++) {
 }
 
 stringify(bottomBar, (err, output) => {
-  fs.appendFile('bottom.csv', output, err => {
+  fs.appendFile('database/bottom.csv', output, err => {
     if (err) {
       console.error(err);
     }
