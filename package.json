@@ -13,9 +13,9 @@
     "start": "node server/index.js",
     "db-setup": "node database/seed.js",
     "build": "webpack --mode=production",
-    "top": "node database/topBar/topBarDataGen1.js & node database/topBar/topBarDataGen2.js & node database/topBar/topBarDataGen3.js & node database/topBar/topBarDataGen4.js & node database/topBar/topBarDataGen5.js & node database/topBar/topBarDataGen6.js & node database/topBar/topBarDataGen7.js & node database/topBar/topBarDataGen8.js & node database/topBar/topBarDataGen9.js & node database/topBar/topBarDataGen10.js",
-    "bottom": "node database/bottomBar/botBarDataGen1.js & node database/bottomBar/botBarDataGen2.js & node database/bottomBar/botBarDataGen3.js & node database/bottomBar/botBarDataGen4.js & node database/bottomBar/botBarDataGen5.js & node database/bottomBar/botBarDataGen6.js & node database/bottomBar/botBarDataGen7.js & node database/bottomBar/botBarDataGen8.js & node database/bottomBar/botBarDataGen9.js & node database/bottomBar/botBarDataGen10.js",
-    "db": "npm run top & npm run bottom"
+    "top": "node database/topBar/topBarDataGen1.js; node database/topBar/topBarDataGen2.js; node database/topBar/topBarDataGen3.js; node database/topBar/topBarDataGen4.js; node database/topBar/topBarDataGen5.js; node database/topBar/topBarDataGen6.js; node database/topBar/topBarDataGen7.js; node database/topBar/topBarDataGen8.js; node database/topBar/topBarDataGen9.js; node database/topBar/topBarDataGen10.js",
+    "bottom": "node database/bottomBar/botBarDataGen1.js; node database/bottomBar/botBarDataGen2.js; node database/bottomBar/botBarDataGen3.js; node database/bottomBar/botBarDataGen4.js; node database/bottomBar/botBarDataGen5.js; node database/bottomBar/botBarDataGen6.js; node database/bottomBar/botBarDataGen7.js; node database/bottomBar/botBarDataGen8.js; node database/bottomBar/botBarDataGen9.js; node database/bottomBar/botBarDataGen10.js",
+    "db": "npm run top; npm run bottom"
   },
   "dependencies": {
     "axios": "^0.18.0",
