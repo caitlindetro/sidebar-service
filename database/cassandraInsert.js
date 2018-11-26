@@ -28,7 +28,6 @@ var AgentModel = models.loadSchema('Agent', {
   key: ['id']
 });
 
-
 AgentModel.syncDB(function(err, result) {
   if (err) {
     console.error(err);
@@ -41,7 +40,7 @@ var SaleModel = models.loadSchema('Sale', {
   fields: {
     id: 'int',
     price: 'int',
-    sellDate: 'int',
+    sellDate: 'text',
     beds: 'int',
     baths: 'int',
     squareFeet: 'int',
@@ -49,7 +48,6 @@ var SaleModel = models.loadSchema('Sale', {
   },
   key: ['id']
 });
-
 
 SaleModel.syncDB(function(err, result) {
   if (err) {
