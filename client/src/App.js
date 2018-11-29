@@ -16,19 +16,12 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    let sideId = Number(window.location.pathname.replace(/\//, ''));
-    if(sideId === 1) {
-      axios.get(`http://localhost:3002/api/sidebar/${sideId}`).then(posts => {
-        this.setState({
-          topBar: posts.data[0],
-          botBar: posts.data[1]
-        })
-      })
-    } 
-    axios.get(`http://localhost:3002/api/sidebar/${sideId}`).then(posts => {
+    let id = Number(window.location.pathname.replace(/\//, ''));
+    axios.get(`http://localhost:3002/api/sidebar/${id}`)
+    .then(data => {
       this.setState({
-        topBar: posts.data[0],
-        botBar: posts.data[1]
+        topBar: data.data[0],
+        botBar: data.data[1]
       })
     })
   }

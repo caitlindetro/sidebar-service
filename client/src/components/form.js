@@ -24,7 +24,7 @@ const startList = function () {
 };
 startList();
 
-const size = 5;
+//const size = 5;
 
 const TopBar = props => (
   <article id="ARTICLE_3">
@@ -89,7 +89,7 @@ const TopBar = props => (
             professionals.
           </p>
           <hr className="separator" />
-          {props.topInfo.slice(0, size).map((item, index) => (
+          {props.topInfo.map((item) => (
             <div id="recipients" className="container">
               {/* <div className='sig-content'> */}
               <div className="sig-photo">
@@ -102,11 +102,7 @@ const TopBar = props => (
                   <label id="first-pic" className="select-label">
                     <img
                       className="agent-pic"
-                      src={
-                        props.topInfo[
-                          Math.floor(Math.random() * props.topInfo.length)
-                        ].imageUrl
-                      }
+                      src={item.imageUrl}
                     />
                   </label>
                 </div>
@@ -114,13 +110,7 @@ const TopBar = props => (
               <div className="sig-info">
                 <div className="display-name">
                   <a href="#" className="profile-link">
-                    <span className="name">
-                      {
-                        props.topInfo[
-                          Math.floor(Math.random() * props.topInfo.length)
-                        ].name
-                      }
-                    </span>
+                    <span className="name">{item.name}</span>
                   </a>
                 </div>
                 <span className="display-rating">
@@ -131,13 +121,7 @@ const TopBar = props => (
                   </span>
                   <span className="count-rating">
                     (
-                    <a href="#" className="ratings-num">
-                      {
-                        props.topInfo[
-                          Math.floor(Math.random() * props.topInfo.length)
-                        ].rating
-                      }
-                    </a>
+                    <a href="#" className="ratings-num">{item.rating}</a>
                     )
                   </span>
                 </span>
@@ -145,21 +129,13 @@ const TopBar = props => (
                 <span className="recent-sales">
                   <a href="#" className="profile-link">
                     <span className="sales-count">
-                      {
-                        props.topInfo[
-                          Math.floor(Math.random() * props.topInfo.length)
-                        ].sales
-                      }
+                      {item.sales}
                     </span>
                     <span className="sales-text">Recent sales</span>
                   </a>
                 </span>
                 <span className="phone-num">
-                  {
-                    props.topInfo[
-                      Math.floor(Math.random() * props.topInfo.length)
-                    ].phone
-                  }
+                  {item.phone}
                 </span>
               </div>
               <span className="agent-badge">Listing Agent</span>

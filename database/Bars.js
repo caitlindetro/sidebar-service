@@ -69,7 +69,7 @@ let getOne = (req, res) => {
     })
 }
 
-module.exports.getInfo = getInfo;
-module.exports.TopBar = TopBar;
-module.exports.BottomBar = BottomBar;
-module.exports.getOne = getOne;
+// module.exports.getInfo = getInfo;
+// module.exports.TopBar = TopBar;
+// module.exports.BottomBar = BottomBar;
+// module.exports.getOne = getOne;
