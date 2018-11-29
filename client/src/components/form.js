@@ -102,7 +102,7 @@ const TopBar = props => (
                   <label id="first-pic" className="select-label">
                     <img
                       className="agent-pic"
-                      src={item.imageUrl}
+                      src={item.imageurl}
                     />
                   </label>
                 </div>
